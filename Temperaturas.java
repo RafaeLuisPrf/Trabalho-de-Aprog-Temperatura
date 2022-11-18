@@ -104,6 +104,12 @@ public class Temperaturas {
         System.out.printf("CATASTROPHIC : %.2f%%%n", mediaCatastrophic);
     }
 
+    public static void bolas(){
+
+        System.out.println("bolas");
+
+    }
+
 
 }
 
