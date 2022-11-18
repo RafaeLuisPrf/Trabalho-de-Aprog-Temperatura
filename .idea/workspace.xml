@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d160461b-f8f0-458e-848d-eb9f323483ef" name="Changes" comment="Trabalho Inicial">
+    <list default="true" id="d160461b-f8f0-458e-848d-eb9f323483ef" name="Changes" comment="Atualização, parte a),b),c), e mais ou menos da e)feito">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temperaturas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperaturas.java" afterDir="false" />
     </list>
@@ -21,6 +21,12 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -51,8 +57,16 @@
       <option name="presentableId" value="Default" />
       <updated>1668678634745</updated>
       <workItem from="1668678637322" duration="715000" />
-      <workItem from="1668796342527" duration="4286000" />
+      <workItem from="1668796342527" duration="6469000" />
     </task>
+    <task id="LOCAL-00001" summary="Atualização, parte a),b),c), e mais ou menos da e)feito">
+      <created>1668801341560</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1668801341560</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -68,5 +82,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Atualização, parte a),b),c), e mais ou menos da e)feito" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualização, parte a),b),c), e mais ou menos da e)feito" />
   </component>
 </project>
