@@ -1,6 +1,108 @@
+import java.util.Arrays;
+import java.util.Scanner;
+
 public class Temperaturas {
+    static Scanner read = new Scanner(System.in);
+
     public static void main(String[] args) {
-        System.out.println("Hello World");
-        ..
+        int linhas, colunas;
+        read.nextLine(); // ler a primeira linha
+        linhas = read.nextInt();
+        colunas = read.nextInt();
+        int[][] mapaDeTemperatura = lerTemperaturas(linhas, colunas); // mapa de temperatura (matriz) .a)
+        mostrarTemperaturas(mapaDeTemperatura, linhas, colunas); // mostrar as temperaturas da matriz b)
+        String[][] mapaDeAlertas = mostrarMapaDeAlertas(mapaDeTemperatura, linhas, colunas); // matriz com alertas c)
+        percentagemDeAlertas(mapaDeAlertas,linhas,colunas); // mostrar a percentagem de alertas por temperaturas e)
+
+
+    }
+
+    //a
+    public static int[][] lerTemperaturas(int linhas, int colunas) {
+        int i, x;
+        int[][] mapaDeTemperatura = new int[linhas][colunas]; // colocar os valores na matriz
+        for (i = 0; i < linhas; i++) {
+            for (x = 0; x < colunas; x++) {
+                mapaDeTemperatura[i][x] = read.nextInt();
+            }
+        }
+        return mapaDeTemperatura;
+    }
+
+    //b
+    public static void mostrarTemperaturas(int[][] mapaDeTemperaturas, int linhas, int colunas) {
+        System.out.println("b)");
+        int i, x;
+        for (i = 0; i < linhas; i++) {
+            for (x = 0; x < colunas; x++) {
+                if (mapaDeTemperaturas[i][x] < 0) { // caso seja negativo o volar, coloco 1 casa decimal a traz
+                    System.out.print(" " + mapaDeTemperaturas[i][x]);
+                } else {
+                    System.out.print("  " + mapaDeTemperaturas[i][x]);
+                }
+            }
+            System.out.println();
+        }
+        System.out.println();
+    }
+
+    //c
+    public static String[][] mostrarMapaDeAlertas(int[][] mapaDeTemperaturas, int linhas, int colunas) {
+        System.out.println("c)");
+        String[][] mapaDeAlertas = new String[linhas][colunas]; //Matriz para guardar os Alertas
+        int i, x;
+        for (i = 0; i < linhas; i++) {
+            for (x = 0; x < colunas; x++) {
+                if (mapaDeTemperaturas[i][x] < 20) {
+                    System.out.print("M");
+                    mapaDeAlertas[i][x] = "M";
+                } else if (mapaDeTemperaturas[i][x] < 30) {
+                    System.out.print("H");
+                    mapaDeAlertas[i][x] = "H";
+                } else if (mapaDeTemperaturas[i][x] < 40) {
+                    System.out.print("E");
+                    mapaDeAlertas[i][x] = "E";
+                } else {
+                    System.out.print("C");
+                    mapaDeAlertas[i][x] = "C";
+                }
+
+            }
+            System.out.println();
+        }
+        System.out.println();
+        return mapaDeAlertas;
+    }
+
+    //e)
+    public static void percentagemDeAlertas(String[][] mapaDeAlertas, int linhas, int colunas) {
+        int nBlocos = linhas * colunas;
+        int i,x;
+        double mediaModerate=0,mediaHigh=0,mediaExtreme=0,mediaCatastrophic=0;
+        for (i = 0; i < linhas; i++) {
+            for (x = 0; x < colunas; x++) {
+                if ( mapaDeAlertas[i][x].equals("M")){
+                mediaModerate++;
+                }
+                if ( mapaDeAlertas[i][x].equals("H")){
+                    mediaHigh++;
+                }
+                if ( mapaDeAlertas[i][x].equals("E")){
+                    mediaExtreme++;
+                }
+                if ( mapaDeAlertas[i][x].equals("C")){
+                    mediaCatastrophic++;
+                }
+            }
+            }
+        mediaModerate=mediaModerate/nBlocos;
+        mediaExtreme=mediaExtreme/nBlocos;
+        mediaHigh=mediaHigh/nBlocos;
+        mediaCatastrophic=mediaCatastrophic/nBlocos;
+        System.out.printf("MODERATE     : %.2f%n",mediaModerate);
+        System.out.printf("HIGH         : %.2f%n",mediaHigh);
+        System.out.printf("EXTREME      : %.2f%n",mediaExtreme);
+        System.out.printf("CATASTROPHIC : %.2f%n",mediaCatastrophic);
     }
 }
+
