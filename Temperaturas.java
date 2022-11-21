@@ -1,7 +1,13 @@
+
 import java.util.Scanner;
 
 public class Temperaturas {
     static Scanner read = new Scanner(System.in);
+
+    public static final int VARIACAO_TEMP1 = -10;
+    public static final int VARIACAO_TEMP2 = 10;
+    public static int CATASTROPHIC = 40;
+    public static int FIRE = 50;
 
     public static void main(String[] args) {
         int linhas, colunas;
@@ -44,14 +50,19 @@ public class Temperaturas {
         //h
         System.out.println("h)");
         alterarMAPeloVento(linhas, colunas, mapaDeTemperatura);
+
+        //i
+        System.out.println("i)");
+        mostrarTemperaturas(mapaDeTemperatura, linhas, colunas);
+        encontrarIncendio(mapaDeTemperatura, linhas, colunas);
     }
 
     //a
     public static int[][] lerTemperaturas(int linhas, int colunas) {
-        int i, x;
+
         int[][] mapaDeTemperatura = new int[linhas][colunas]; // colocar os valores na matriz
-        for (i = 0; i < linhas; i++) {
-            for (x = 0; x < colunas; x++) {
+        for (int i = 0; i < linhas; i++) {
+            for (int x = 0; x < colunas; x++) {
                 mapaDeTemperatura[i][x] = read.nextInt();
             }
         }
@@ -60,9 +71,9 @@ public class Temperaturas {
 
     //b
     public static void mostrarTemperaturas(int[][] mapaDeTemperaturas, int linhas, int colunas) {
-        int i, x;
-        for (i = 0; i < linhas; i++) {
-            for (x = 0; x < colunas; x++) {
+
+        for (int i = 0; i < linhas; i++) {
+            for (int x = 0; x < colunas; x++) {
                 if (mapaDeTemperaturas[i][x] < 0) { // caso seja negativo o volar, coloco 1 casa decimal a traz
                     System.out.print(" " + mapaDeTemperaturas[i][x]);
                 } else {
@@ -77,23 +88,24 @@ public class Temperaturas {
     public static void criarMapaDeAlertas(int[][] mapaDeTemperaturas, int linhas, int colunas, String[][] mapaDeAlertas) {
         for (int i = 0; i < linhas; i++) {
             for (int x = 0; x < colunas; x++) {
-                    if (mapaDeTemperaturas[i][x] < 20) {
-                        mapaDeAlertas[i][x] = "M";
-                    } else if (mapaDeTemperaturas[i][x] < 30) {
-                        mapaDeAlertas[i][x] = "H";
-                    } else if (mapaDeTemperaturas[i][x] < 40) {
-                        mapaDeAlertas[i][x] = "E";
-                    } else {
-                        mapaDeAlertas[i][x] = "C";
-                    }
+                if (mapaDeTemperaturas[i][x] < 20) {
+                    mapaDeAlertas[i][x] = "M";
+                } else if (mapaDeTemperaturas[i][x] < 30) {
+                    mapaDeAlertas[i][x] = "H";
+                } else if (mapaDeTemperaturas[i][x] < 40) {
+                    mapaDeAlertas[i][x] = "E";
+                } else {
+                    mapaDeAlertas[i][x] = "C";
                 }
             }
         }
+    }
+
     //c
     public static void mostrarMapaDeAlertas(int linhas, int colunas, String[][] mapaDeAlertas) {
-        int i, x;
-        for (i = 0; i < linhas; i++) {
-            for (x = 0; x < colunas; x++) {
+
+        for (int i = 0; i < linhas; i++) {
+            for (int x = 0; x < colunas; x++) {
                 System.out.print(mapaDeAlertas[i][x]);
             }
             System.out.println();
@@ -101,13 +113,28 @@ public class Temperaturas {
         System.out.println();
     }
 
+    //d
+    public static void alterarMT(int[][] mapaDeTemperaturas, int linhas, int colunas, int deltaT) {
+
+        for (int i = 0; i < linhas; i++) {
+            for (int x = 0; x < colunas; x++) {
+
+                mapaDeTemperaturas[i][x] += deltaT;
+
+            }
+        }
+    }
+
+
     //e)
     public static void percentagemDeAlertas(String[][] mapaDeAlertas, int linhas, int colunas) {
+
         int nBlocos = linhas * colunas;
-        int i, x;
         float mediaModerate = 0, mediaHigh = 0, mediaExtreme = 0, mediaCatastrophic = 0;
-        for (i = 0; i < linhas; i++) {
-            for (x = 0; x < colunas; x++) {
+
+        for (int i = 0; i < linhas; i++) {
+            for (int x = 0; x < colunas; x++) {
+
                 if (mapaDeAlertas[i][x].equals("M")) {
                     mediaModerate++;
                 }
@@ -135,10 +162,10 @@ public class Temperaturas {
 
     //f
     public static void necessarioParaCatastrophic(int linhas, int colunas, int[][] mapaDeTemperatura) {
-        int i, x, menor = mapaDeTemperatura[0][0], tmpAtual, tmpNecessariaPC;
-        final int CATASTROPHIC = 40;
-        for (i = 0; i < linhas; i++) {
-            for (x = 0; x < colunas; x++) {
+        int menor = mapaDeTemperatura[0][0], tmpAtual, tmpNecessariaPC;
+
+        for (int i = 0; i < linhas; i++) {
+            for (int x = 0; x < colunas; x++) {
                 tmpAtual = mapaDeTemperatura[i][x];
                 if (tmpAtual < menor) {
                     menor = tmpAtual;
@@ -194,17 +221,50 @@ public class Temperaturas {
                 }
             }
         }
-
-        /*for (int i = 0; i < colunas; i++) {
-            for (int x = 1; x < linhas; x++) {
-                if (mapaDeAlertasVariacao[x - 1][i].equals("C")) {
-                    mapaDeAlertasVariacao[x][i] = "C";
-                    i++;
-                }
-            }
-*/
-        //System.out.println(Arrays.deepToString(copiaMapaDeALertasVariacao));
         mostrarMapaDeAlertas(linhas, colunas, copiaMapaDeAlertasVaricao);
     }
-}
 
+    public static void encontrarIncendio(int[][] mapaDeTemperaturas, int linhas, int colunas) {
+
+        int x = 0, y = 0, nFogosMax = 0, nFogos = 0;
+
+        boolean fogoEncontrado = false;
+
+        for (int i = 1; i < linhas - 1; i++) {
+            for (int j = 1; j < colunas - 1; j++) {
+
+                for (int k = i - 1; k < i + 1; k++) {
+                    for (int l = j - 1; l < j + 1; l++) {
+
+                        if (mapaDeTemperaturas[k][l] >= FIRE) {
+
+                            nFogos++;
+                            System.out.println("fogo");
+                            fogoEncontrado = true;
+
+                        }
+                    }
+                }
+
+                if (nFogosMax < nFogos) {
+
+                    nFogosMax = nFogos;
+                    x = j;
+                    y = i;
+
+                }
+            }
+        }
+        if (fogoEncontrado == true) {
+
+            System.out.printf("drop water at (%d , %d)%n", y, x);
+            System.out.println(mapaDeTemperaturas[y][x]);
+
+        } else {
+
+            System.out.println("no fire");
+
+        }
+
+    }
+}

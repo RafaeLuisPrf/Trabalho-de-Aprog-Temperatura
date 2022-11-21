@@ -4,13 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d160461b-f8f0-458e-848d-eb9f323483ef" name="Changes" comment="Atualização, a) , b) ,c) ,d) ,e) ,f) ,g) ,h) feitos.&#10;Falta i),j)">
+    <list default="true" id="d160461b-f8f0-458e-848d-eb9f323483ef" name="Changes" comment="Atualização, a) , b) ,c) ,d) ,e) ,f) ,g) ,h) feitos.&#10;i) por acabar">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temperaturas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperaturas.java" afterDir="false" />
     </list>
-    <list id="616672af-9bc9-409e-9f03-1516eca622d5" name="Changes by Utilizador" comment="">
-      <change beforePath="$PROJECT_DIR$/Temperaturas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperaturas.java" afterDir="false" />
-    </list>
+    <list id="616672af-9bc9-409e-9f03-1516eca622d5" name="Changes by Utilizador" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,17 +29,6 @@
       </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="LineStatusTrackerManager">
-    <file path="$PROJECT_DIR$/Temperaturas.java">
-      <ranges>
-        <range start1="5" end1="5" start2="5" end2="8" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
-        <range start1="79" end1="92" start2="82" end2="94" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="104" end1="104" start2="106" end2="118" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
-        <range start1="172" end1="172" start2="186" end2="187" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="196" end1="206" start2="211" end2="211" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
-      </ranges>
-    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -115,7 +102,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Atualização, parte a),b),c), e mais ou menos da e)feito" />
     <MESSAGE value="Atualização, a) , b) ,c) ,d) ,e) ,f) ,g) ,h) feitos.&#10;Falta i),j)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualização, a) , b) ,c) ,d) ,e) ,f) ,g) ,h) feitos.&#10;Falta i),j)" />
+    <MESSAGE value="Atualização, a) , b) ,c) ,d) ,e) ,f) ,g) ,h) feitos.&#10;i) por acabar" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualização, a) , b) ,c) ,d) ,e) ,f) ,g) ,h) feitos.&#10;i) por acabar" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
