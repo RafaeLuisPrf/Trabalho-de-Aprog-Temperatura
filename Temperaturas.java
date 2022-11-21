@@ -258,7 +258,6 @@ public class Temperaturas {
         if (fogoEncontrado == true) {
 
             System.out.printf("drop water at (%d , %d)%n", y, x);
-            System.out.println(mapaDeTemperaturas[y][x]);
 
         } else {
 
