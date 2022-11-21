@@ -233,13 +233,12 @@ public class Temperaturas {
         for (int i = 1; i < linhas - 1; i++) {
             for (int j = 1; j < colunas - 1; j++) {
 
-                for (int k = i - 1; k < i + 1; k++) {
-                    for (int l = j - 1; l < j + 1; l++) {
+                for (int k = i - 1; k <= i + 1; k++) {
+                    for (int l = j - 1; l <= j + 1; l++) {
 
                         if (mapaDeTemperaturas[k][l] >= FIRE) {
 
                             nFogos++;
-                            System.out.println("fogo");
                             fogoEncontrado = true;
 
                         }
@@ -253,6 +252,7 @@ public class Temperaturas {
                     y = i;
 
                 }
+                nFogos = 0;
             }
         }
         if (fogoEncontrado == true) {
