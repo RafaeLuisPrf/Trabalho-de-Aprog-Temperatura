@@ -7,7 +7,6 @@
     <list default="true" id="d160461b-f8f0-458e-848d-eb9f323483ef" name="Changes" comment="Atualização, a) , b) ,c) ,d) ,e) ,f) ,g) ,h) feitos.&#10;Falta i),j)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temperaturas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperaturas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Trabalho-de-Aprog-Temperatura/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Trabalho-de-Aprog-Temperatura/.idea/workspace.xml" afterDir="false" />
     </list>
     <list id="616672af-9bc9-409e-9f03-1516eca622d5" name="Changes by Utilizador" comment="">
       <change beforePath="$PROJECT_DIR$/Temperaturas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperaturas.java" afterDir="false" />
@@ -36,24 +35,11 @@
   <component name="LineStatusTrackerManager">
     <file path="$PROJECT_DIR$/Temperaturas.java">
       <ranges>
-        <range start1="4" end1="4" start2="4" end2="7" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
-        <range start1="11" end1="11" start2="14" end2="16" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="12" end1="12" start2="17" end2="19" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="14" end1="14" start2="21" end2="23" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="15" end1="16" start2="24" end2="35" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="19" end1="19" start2="38" end2="41" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="20" end1="20" start2="42" end2="49" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="50" end1="50" start2="79" end2="95" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="51" end1="52" start2="96" end2="97" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="55" end1="69" start2="100" end2="101" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="73" end1="73" start2="105" end2="116" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
-        <range start1="75" end1="75" start2="118" end2="119" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
-        <range start1="79" end1="80" start2="123" end2="124" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="96" end1="104" start2="140" end2="149" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="106" end1="107" start2="151" end2="167" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="108" end1="109" start2="168" end2="172" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="110" end1="110" start2="173" end2="187" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
-        <range start1="112" end1="112" start2="189" end2="224" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="5" end1="5" start2="5" end2="8" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="79" end1="92" start2="82" end2="94" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="104" end1="104" start2="106" end2="118" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="172" end1="172" start2="186" end2="187" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="196" end1="206" start2="211" end2="211" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
       </ranges>
     </file>
   </component>
@@ -71,6 +57,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Utilizador/IdeaProjects/MoonShak Semana 9&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -88,7 +75,11 @@
       <updated>1668678634745</updated>
       <workItem from="1668678637322" duration="715000" />
       <workItem from="1668796342527" duration="6469000" />
-      <workItem from="1668811227998" duration="3566000" />
+      <workItem from="1668811227998" duration="3694000" />
+      <workItem from="1668863149154" duration="167000" />
+      <workItem from="1668868157225" duration="228000" />
+      <workItem from="1668868453024" duration="29000" />
+      <workItem from="1669033843260" duration="2276000" />
     </task>
     <task id="LOCAL-00001" summary="Atualização, parte a),b),c), e mais ou menos da e)feito">
       <created>1668801341560</created>
@@ -97,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1668801341560</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Atualização, a) , b) ,c) ,d) ,e) ,f) ,g) ,h) feitos.&#10;Falta i),j)">
+      <created>1668814893252</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1668814893252</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

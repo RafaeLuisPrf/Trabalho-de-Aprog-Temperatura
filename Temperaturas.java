@@ -77,19 +77,18 @@ public class Temperaturas {
     public static void criarMapaDeAlertas(int[][] mapaDeTemperaturas, int linhas, int colunas, String[][] mapaDeAlertas) {
         for (int i = 0; i < linhas; i++) {
             for (int x = 0; x < colunas; x++) {
-                if (mapaDeTemperaturas[i][x] < 20) {
-                    mapaDeAlertas[i][x] = "M";
-                } else if (mapaDeTemperaturas[i][x] < 30) {
-                    mapaDeAlertas[i][x] = "H";
-                } else if (mapaDeTemperaturas[i][x] < 40) {
-                    mapaDeAlertas[i][x] = "E";
-                } else {
-                    mapaDeAlertas[i][x] = "C";
+                    if (mapaDeTemperaturas[i][x] < 20) {
+                        mapaDeAlertas[i][x] = "M";
+                    } else if (mapaDeTemperaturas[i][x] < 30) {
+                        mapaDeAlertas[i][x] = "H";
+                    } else if (mapaDeTemperaturas[i][x] < 40) {
+                        mapaDeAlertas[i][x] = "E";
+                    } else {
+                        mapaDeAlertas[i][x] = "C";
+                    }
                 }
             }
         }
-    }
-
     //c
     public static void mostrarMapaDeAlertas(int linhas, int colunas, String[][] mapaDeAlertas) {
         int i, x;
@@ -170,6 +169,7 @@ public class Temperaturas {
         }
         media = ((float) contagemMudanca / nBlocos) * 100;
         System.out.printf("Alert Levels changes due to temperature variations by %dºC :%.2f%%%n", VARIACAO_TEMP2, media);
+        System.out.println();
     }
 
     public static void copiarMatriz(String[][] mapaDeAlertasVariacao, String[][] copiaMapaDeALertasVariacao, int linhas, int colunas) {
