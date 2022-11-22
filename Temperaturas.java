@@ -2,10 +2,14 @@
 import java.util.Scanner;
 
 public class Temperaturas {
+
     static Scanner read = new Scanner(System.in);
 
     public static final int VARIACAO_TEMP1 = -10;
     public static final int VARIACAO_TEMP2 = 10;
+    public static final int MODERATE = 20;
+    public static final int HIGH = 30;
+    public static final int EXTREME = 40;
     public static int CATASTROPHIC = 40;
     public static int FIRE = 50;
 
@@ -55,6 +59,8 @@ public class Temperaturas {
         System.out.println("i)");
         mostrarTemperaturas(mapaDeTemperatura, linhas, colunas);
         encontrarIncendio(mapaDeTemperatura, linhas, colunas);
+        //j
+        System.out.println("j)");
     }
 
     //a
@@ -88,11 +94,11 @@ public class Temperaturas {
     public static void criarMapaDeAlertas(int[][] mapaDeTemperaturas, int linhas, int colunas, String[][] mapaDeAlertas) {
         for (int i = 0; i < linhas; i++) {
             for (int x = 0; x < colunas; x++) {
-                if (mapaDeTemperaturas[i][x] < 20) {
+                if (mapaDeTemperaturas[i][x] < MODERATE) {
                     mapaDeAlertas[i][x] = "M";
-                } else if (mapaDeTemperaturas[i][x] < 30) {
+                } else if (mapaDeTemperaturas[i][x] < HIGH) {
                     mapaDeAlertas[i][x] = "H";
-                } else if (mapaDeTemperaturas[i][x] < 40) {
+                } else if (mapaDeTemperaturas[i][x] < EXTREME) {
                     mapaDeAlertas[i][x] = "E";
                 } else {
                     mapaDeAlertas[i][x] = "C";
@@ -264,6 +270,6 @@ public class Temperaturas {
             System.out.println("no fire");
 
         }
-
+        System.out.println();
     }
 }
