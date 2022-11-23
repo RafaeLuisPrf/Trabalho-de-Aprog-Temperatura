@@ -1,8 +1,6 @@
-import java.io.File;
 import java.util.Scanner;
-import java.io.FileNotFoundException;
-
 public class Temperaturas {
+    static Scanner read = new Scanner(System.in);
     public static final int VARIACAO_TEMP1 = -10;
     public static final int VARIACAO_TEMP2 = 10;
     public static final int MODERATE = 20;
@@ -10,62 +8,72 @@ public class Temperaturas {
     public static final int EXTREME = 40;
     public static final int CATASTROPHIC = 40;
     public static final int FIRE = 50;
-    public static final String input = "C:\\Users\\Utilizador\\OneDrive - Instituto Superior de Engenharia do Porto\\Documents\\GitHub\\Trabalho-de-Aprog-Temperatura\\out\\production\\input.txt";
-    public static void main(String[] args) throws FileNotFoundException {
+    public static void main(String[] args) {
+
         int linhas, colunas;
+
+        read.nextLine(); // ler a primeira linha
+        linhas = read.nextInt();
+        colunas = read.nextInt();
+
+        String[][] mapaDeAlertas = new String[linhas][colunas]; //Matriz para guardar os Alertas c)
+
         //a
-        int[][] mapaDeTemperatura = lerTemperaturas(); // mapa de temperatura (matriz) .a)
-        linhas = mapaDeTemperatura.length;
-        colunas = mapaDeTemperatura[0].length;
+        int[][] mapaDeTemperatura = lerTemperaturas(linhas, colunas); // mapa de temperatura (matriz) .a)
+
         //b
         System.out.println("b)");
         mostrarTemperaturas(mapaDeTemperatura, linhas, colunas); // mostrar as temperaturas da matriz b)
+
         //c
-        String[][] mapaDeAlertas = new String[linhas][colunas]; //Matriz para guardar os Alertas c)
         System.out.println("c)");
         criarMapaDeAlertas(mapaDeTemperatura, linhas, colunas, mapaDeAlertas);//criar a matriz alertas
         mostrarMapaDeAlertas(linhas, colunas, mapaDeAlertas); // matriz com alertas
+
         //d
         System.out.println("d)");
         alterarMT(mapaDeTemperatura, linhas, colunas, VARIACAO_TEMP1);
         mostrarTemperaturas(mapaDeTemperatura, linhas, colunas);
         criarMapaDeAlertas(mapaDeTemperatura, linhas, colunas, mapaDeAlertas);
         mostrarMapaDeAlertas(linhas, colunas, mapaDeAlertas);
+
         //e
         System.out.println("e)");
         percentagemDeAlertas(mapaDeAlertas, linhas, colunas); // mostrar a percentagem de alertas por temperaturas e)
+
         //f
         System.out.println("f)");
         necessarioParaCatastrophic(linhas, colunas, mapaDeTemperatura);
+
         //g
         System.out.println("g)");
         variacaoDosNiveisAlerta(mapaDeAlertas, linhas, colunas, mapaDeTemperatura);
+
         //h
         System.out.println("h)");
         alterarMAPeloVento(linhas, colunas, mapaDeTemperatura);
+
         //i
         System.out.println("i)");
         mostrarTemperaturas(mapaDeTemperatura, linhas, colunas);
         encontrarIncendio(mapaDeTemperatura, linhas, colunas);
+
         //j
         System.out.println("j)");
         colunasSafe(mapaDeTemperatura, linhas, colunas);
     }
 
     //a
-    public static int[][] lerTemperaturas() throws FileNotFoundException {
-        Scanner ler = new Scanner(new File(input));
-        ler.nextLine(); //ler a data e hora do dia
-        int linhas,colunas;
-        linhas = ler.nextInt();
-        colunas = ler.nextInt();
+    public static int[][] lerTemperaturas(int linhas, int colunas) {
+
         int[][] mapaDeTemperatura = new int[linhas][colunas]; // colocar os valores na matriz
+
         for (int i = 0; i < linhas; i++) {
             for (int x = 0; x < colunas; x++) {
-                mapaDeTemperatura[i][x] = ler.nextInt();
+                mapaDeTemperatura[i][x] = read.nextInt();
             }
         }
-        ler.close();
+
         return mapaDeTemperatura;
     }
 
@@ -74,6 +82,7 @@ public class Temperaturas {
 
         for (int i = 0; i < linhas; i++) {
             for (int x = 0; x < colunas; x++) {
+
                 if (mapaDeTemperaturas[i][x] < 0) { // caso seja negativo o volar, coloco 1 casa decimal a traz
                     System.out.print(" " + mapaDeTemperaturas[i][x]);
                 } else {
@@ -86,8 +95,10 @@ public class Temperaturas {
     }
 
     public static void criarMapaDeAlertas(int[][] mapaDeTemperaturas, int linhas, int colunas, String[][] mapaDeAlertas) {
+
         for (int i = 0; i < linhas; i++) {
             for (int x = 0; x < colunas; x++) {
+
                 if (mapaDeTemperaturas[i][x] < MODERATE) {
                     mapaDeAlertas[i][x] = "M";
                 } else if (mapaDeTemperaturas[i][x] < HIGH) {
@@ -153,6 +164,7 @@ public class Temperaturas {
         mediaExtreme = (mediaExtreme / nBlocos) * 100;
         mediaHigh = (mediaHigh / nBlocos) * 100;
         mediaCatastrophic = (mediaCatastrophic / nBlocos) * 100;
+
         System.out.printf("MODERATE     :  %6.2f%%%n", mediaModerate);
         System.out.printf("HIGH         :  %6.2f%%%n", mediaHigh);
         System.out.printf("EXTREME      :  %6.2f%%%n", mediaExtreme);
@@ -162,6 +174,7 @@ public class Temperaturas {
 
     //f
     public static void necessarioParaCatastrophic(int linhas, int colunas, int[][] mapaDeTemperatura) {
+
         int menor = mapaDeTemperatura[0][0], tmpAtual, tmpNecessariaPC;
 
         for (int i = 0; i < linhas; i++) {
@@ -178,6 +191,7 @@ public class Temperaturas {
     }
 
     public static void variacaoDosNiveisAlerta(String[][] mapaDeAlertas, int linhas, int colunas, int[][] mapaDeTemperatura) {
+
         int i, x, nBlocos = linhas * colunas;
         int contagemMudanca = 0;
         float media;
@@ -199,10 +213,11 @@ public class Temperaturas {
         System.out.println();
     }
 
-    public static void copiarMatriz(String[][] mapaDeAlertasVariacao, String[][] copiaMapaDeALertasVariacao, int linhas, int colunas) {
+    public static void copiarMatriz(String[][] matrizOriginal, String[][] matrizCopia, int linhas, int colunas) {
+
         for (int i = 0; i < linhas; i++) {
             for (int x = 0; x < colunas; x++) {
-                copiaMapaDeALertasVariacao[i][x] = mapaDeAlertasVariacao[i][x];
+                matrizCopia[i][x] = matrizOriginal[i][x];
             }
         }
     }
@@ -216,6 +231,7 @@ public class Temperaturas {
 
         for (int i = 1; i < linhas; i++) {
             for (int x = 0; x < colunas; x++) {
+
                 if (mapaDeAlertasVariacao[i - 1][x].equals("C")) {
                     copiaMapaDeAlertasVaricao[i][x] = "C";
                 }
@@ -271,23 +287,21 @@ public class Temperaturas {
                 x = -1;
             }
         }
+
         if (colunaMaisSafe > -1) {
             System.out.println("safe column = (" + colunaMaisSafe + ")");
         } else {
             System.out.println("safe column = NONE");
         }
     }
-
     public static int verificarColuna(String[][] mapaDeALertas, int linhas, int coluna) {
-
-        int safe = 1;
 
         for (int x = 0; x < linhas; x++) {
             if (mapaDeALertas[x][coluna].equals("C")) {
-                safe = 0;
-                x = linhas + 1;
+                return 0;
             }
         }
-        return safe;
+
+        return 1;
     }
 }
