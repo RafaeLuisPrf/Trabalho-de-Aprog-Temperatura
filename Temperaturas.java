@@ -1,6 +1,8 @@
+import java.io.File;
 import java.util.Scanner;
+import java.io.FileNotFoundException;
+
 public class Temperaturas {
-    static Scanner read = new Scanner(System.in);
     public static final int VARIACAO_TEMP1 = -10;
     public static final int VARIACAO_TEMP2 = 10;
     public static final int MODERATE = 20;
@@ -8,18 +10,18 @@ public class Temperaturas {
     public static final int EXTREME = 40;
     public static final int CATASTROPHIC = 40;
     public static final int FIRE = 50;
-    public static void main(String[] args) {
+    public static final String input = "C:\\Users\\Utilizador\\OneDrive - Instituto Superior de Engenharia do Porto\\Documents\\GitHub\\Trabalho-de-Aprog-Temperatura\\out\\production\\input.txt";
+    public static void main(String[] args) throws FileNotFoundException {
         int linhas, colunas;
-        read.nextLine(); // ler a primeira linha
-        linhas = read.nextInt();
-        colunas = read.nextInt();
-        String[][] mapaDeAlertas = new String[linhas][colunas]; //Matriz para guardar os Alertas c)
         //a
-        int[][] mapaDeTemperatura = lerTemperaturas(linhas, colunas); // mapa de temperatura (matriz) .a)
+        int[][] mapaDeTemperatura = lerTemperaturas(); // mapa de temperatura (matriz) .a)
+        linhas = mapaDeTemperatura.length;
+        colunas = mapaDeTemperatura[0].length;
         //b
         System.out.println("b)");
         mostrarTemperaturas(mapaDeTemperatura, linhas, colunas); // mostrar as temperaturas da matriz b)
         //c
+        String[][] mapaDeAlertas = new String[linhas][colunas]; //Matriz para guardar os Alertas c)
         System.out.println("c)");
         criarMapaDeAlertas(mapaDeTemperatura, linhas, colunas, mapaDeAlertas);//criar a matriz alertas
         mostrarMapaDeAlertas(linhas, colunas, mapaDeAlertas); // matriz com alertas
@@ -51,14 +53,19 @@ public class Temperaturas {
     }
 
     //a
-    public static int[][] lerTemperaturas(int linhas, int colunas) {
-
+    public static int[][] lerTemperaturas() throws FileNotFoundException {
+        Scanner ler = new Scanner(new File(input));
+        ler.nextLine(); //ler a data e hora do dia
+        int linhas,colunas;
+        linhas = ler.nextInt();
+        colunas = ler.nextInt();
         int[][] mapaDeTemperatura = new int[linhas][colunas]; // colocar os valores na matriz
         for (int i = 0; i < linhas; i++) {
             for (int x = 0; x < colunas; x++) {
-                mapaDeTemperatura[i][x] = read.nextInt();
+                mapaDeTemperatura[i][x] = ler.nextInt();
             }
         }
+        ler.close();
         return mapaDeTemperatura;
     }
 
@@ -252,11 +259,11 @@ public class Temperaturas {
     }
 
     public static void colunasSafe(int[][] mapasDeTemperatura, int linhas, int colunas) {
-        int safe = 0, colunaMaisSafe = -1;
+        int colunaMaisSafe = -1;
         String[][] mapaDeAlertasVariacao = new String[linhas][colunas];
         criarMapaDeAlertas(mapasDeTemperatura, linhas, colunas, mapaDeAlertasVariacao);
         for (int x = colunas - 1; x > -1; x--) {
-            if (verificarColuna(mapasDeTemperatura, mapaDeAlertasVariacao, linhas, x) == 1) {
+            if (verificarColuna(mapaDeAlertasVariacao, linhas, x) == 1) {
                 colunaMaisSafe = x;
                 x = -1;
             }
@@ -267,11 +274,12 @@ public class Temperaturas {
             System.out.println("safe column = NONE");
         }
     }
-    public static int verificarColuna(int[][] mapaDeTemperatura, String[][] mapaDeALertas, int linhas, int coluna) {
+    public static int verificarColuna(String[][] mapaDeALertas, int linhas, int coluna) {
         int safe = 1;
         for (int x = 0; x < linhas; x++) {
             if (mapaDeALertas[x][coluna].equals("C")) {
                 safe = 0;
+                x = linhas + 1;
             }
         }
         return safe;
