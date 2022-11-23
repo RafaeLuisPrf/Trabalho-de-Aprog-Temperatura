@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d160461b-f8f0-458e-848d-eb9f323483ef" name="Changes" comment="Atualização, a) , b) ,c) ,d) ,e) ,f) ,g) ,h) i) feitos.&#10;falta:j(ja comecei mas ha umas cenas que temos de perguntar ao stor)) e otimização (ainda ha muito esparguete)">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temperaturas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperaturas.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Trabalho-de-Aprog-Temperatura/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Trabalho-de-Aprog-Temperatura/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="d160461b-f8f0-458e-848d-eb9f323483ef" name="Changes" comment="Atualização: ex J completo, so falta a atualização da leitura do input por ficheiros" />
     <list id="616672af-9bc9-409e-9f03-1516eca622d5" name="Changes by Utilizador" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +65,7 @@
       <workItem from="1668868453024" duration="29000" />
       <workItem from="1669033843260" duration="2276000" />
       <workItem from="1669061492197" duration="1223000" />
-      <workItem from="1669117711676" duration="960000" />
+      <workItem from="1669117711676" duration="1746000" />
     </task>
     <task id="LOCAL-00001" summary="Atualização, parte a),b),c), e mais ou menos da e)feito">
       <created>1668801341560</created>
@@ -106,7 +102,21 @@
       <option name="project" value="LOCAL" />
       <updated>1669055775701</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Atualização: ex J completo, so falta a atualização da leitura do input por ficheiros">
+      <created>1669163310574</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1669163310574</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Atualização: ex J completo, so falta a atualização da leitura do input por ficheiros">
+      <created>1669163457082</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1669163457082</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -129,7 +139,8 @@
     <MESSAGE value="Atualização, a) , b) ,c) ,d) ,e) ,f) ,g) ,h) feitos.&#10;i) por acabar" />
     <MESSAGE value="Atualização, a) , b) ,c) ,d) ,e) ,f) ,g) ,h) i) feitos.&#10;falta:j) e otimização (ainda ha muito esparguete)" />
     <MESSAGE value="Atualização, a) , b) ,c) ,d) ,e) ,f) ,g) ,h) i) feitos.&#10;falta:j(ja comecei mas ha umas cenas que temos de perguntar ao stor)) e otimização (ainda ha muito esparguete)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualização, a) , b) ,c) ,d) ,e) ,f) ,g) ,h) i) feitos.&#10;falta:j(ja comecei mas ha umas cenas que temos de perguntar ao stor)) e otimização (ainda ha muito esparguete)" />
+    <MESSAGE value="Atualização: ex J completo, so falta a atualização da leitura do input por ficheiros" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualização: ex J completo, so falta a atualização da leitura do input por ficheiros" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
