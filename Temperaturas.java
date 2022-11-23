@@ -259,9 +259,12 @@ public class Temperaturas {
     }
 
     public static void colunasSafe(int[][] mapasDeTemperatura, int linhas, int colunas) {
+
         int colunaMaisSafe = -1;
+
         String[][] mapaDeAlertasVariacao = new String[linhas][colunas];
         criarMapaDeAlertas(mapasDeTemperatura, linhas, colunas, mapaDeAlertasVariacao);
+
         for (int x = colunas - 1; x > -1; x--) {
             if (verificarColuna(mapaDeAlertasVariacao, linhas, x) == 1) {
                 colunaMaisSafe = x;
@@ -274,8 +277,11 @@ public class Temperaturas {
             System.out.println("safe column = NONE");
         }
     }
+
     public static int verificarColuna(String[][] mapaDeALertas, int linhas, int coluna) {
+
         int safe = 1;
+
         for (int x = 0; x < linhas; x++) {
             if (mapaDeALertas[x][coluna].equals("C")) {
                 safe = 0;

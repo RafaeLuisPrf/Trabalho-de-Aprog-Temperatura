@@ -4,8 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d160461b-f8f0-458e-848d-eb9f323483ef" name="Changes" comment="Atualização: ex J completo, so falta a atualização da leitura do input por ficheiros">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="d160461b-f8f0-458e-848d-eb9f323483ef" name="Changes" comment="Atualização: ex J completo e a leitura dos ficheiros , ja esta feita">
       <change beforePath="$PROJECT_DIR$/Temperaturas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperaturas.java" afterDir="false" />
     </list>
     <list id="616672af-9bc9-409e-9f03-1516eca622d5" name="Changes by Utilizador" comment="" />
@@ -38,20 +37,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "last_opened_file_path": "C:/Users/Utilizador/IdeaProjects/Coisas Aleatorias",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "CodeWithMe"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Utilizador/IdeaProjects/Coisas Aleatorias&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CodeWithMe&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Utilizador\OneDrive - Instituto Superior de Engenharia do Porto\Documents\GitHub\Trabalho-de-Aprog-Temperatura\out\production" />
@@ -74,7 +73,7 @@
       <workItem from="1669033843260" duration="2276000" />
       <workItem from="1669061492197" duration="1223000" />
       <workItem from="1669117711676" duration="1746000" />
-      <workItem from="1669195717553" duration="2120000" />
+      <workItem from="1669195717553" duration="3074000" />
     </task>
     <task id="LOCAL-00001" summary="Atualização, parte a),b),c), e mais ou menos da e)feito">
       <created>1668801341560</created>
