@@ -1,66 +1,53 @@
-
 import java.util.Scanner;
-
 public class Temperaturas {
-
     static Scanner read = new Scanner(System.in);
-
     public static final int VARIACAO_TEMP1 = -10;
     public static final int VARIACAO_TEMP2 = 10;
     public static final int MODERATE = 20;
     public static final int HIGH = 30;
     public static final int EXTREME = 40;
-    public static int CATASTROPHIC = 40;
-    public static int FIRE = 50;
-
+    public static final int CATASTROPHIC = 40;
+    public static final int FIRE = 50;
     public static void main(String[] args) {
         int linhas, colunas;
         read.nextLine(); // ler a primeira linha
         linhas = read.nextInt();
         colunas = read.nextInt();
         String[][] mapaDeAlertas = new String[linhas][colunas]; //Matriz para guardar os Alertas c)
-
         //a
         int[][] mapaDeTemperatura = lerTemperaturas(linhas, colunas); // mapa de temperatura (matriz) .a)
-
         //b
         System.out.println("b)");
         mostrarTemperaturas(mapaDeTemperatura, linhas, colunas); // mostrar as temperaturas da matriz b)
-
         //c
         System.out.println("c)");
         criarMapaDeAlertas(mapaDeTemperatura, linhas, colunas, mapaDeAlertas);//criar a matriz alertas
         mostrarMapaDeAlertas(linhas, colunas, mapaDeAlertas); // matriz com alertas
-
         //d
         System.out.println("d)");
         alterarMT(mapaDeTemperatura, linhas, colunas, VARIACAO_TEMP1);
         mostrarTemperaturas(mapaDeTemperatura, linhas, colunas);
         criarMapaDeAlertas(mapaDeTemperatura, linhas, colunas, mapaDeAlertas);
         mostrarMapaDeAlertas(linhas, colunas, mapaDeAlertas);
-
         //e
         System.out.println("e)");
         percentagemDeAlertas(mapaDeAlertas, linhas, colunas); // mostrar a percentagem de alertas por temperaturas e)
-
         //f
         System.out.println("f)");
         necessarioParaCatastrophic(linhas, colunas, mapaDeTemperatura);
-
         //g
         System.out.println("g)");
         variacaoDosNiveisAlerta(mapaDeAlertas, linhas, colunas, mapaDeTemperatura);
-
         //h
         System.out.println("h)");
         alterarMAPeloVento(linhas, colunas, mapaDeTemperatura);
-
         //i
         System.out.println("i)");
         mostrarTemperaturas(mapaDeTemperatura, linhas, colunas);
         encontrarIncendio(mapaDeTemperatura, linhas, colunas);
         //j
         System.out.println("j)");
+        colunasSafe(mapaDeTemperatura, linhas, colunas);
     }
 
     //a
@@ -238,38 +225,55 @@ public class Temperaturas {
 
         for (int i = 1; i < linhas - 1; i++) {
             for (int j = 1; j < colunas - 1; j++) {
-
                 for (int k = i - 1; k <= i + 1; k++) {
                     for (int l = j - 1; l <= j + 1; l++) {
-
                         if (mapaDeTemperaturas[k][l] >= FIRE) {
-
                             nFogos++;
                             fogoEncontrado = true;
-
                         }
                     }
                 }
-
                 if (nFogosMax < nFogos) {
 
                     nFogosMax = nFogos;
                     x = j;
                     y = i;
-
                 }
                 nFogos = 0;
             }
         }
         if (fogoEncontrado == true) {
-
             System.out.printf("drop water at (%d , %d)%n", y, x);
-
         } else {
-
             System.out.println("no fire");
 
         }
         System.out.println();
+    }
+
+    public static void colunasSafe(int[][] mapasDeTemperatura, int linhas, int colunas) {
+        int safe = 0, colunaMaisSafe = -1;
+        String[][] mapaDeAlertasVariacao = new String[linhas][colunas];
+        criarMapaDeAlertas(mapasDeTemperatura, linhas, colunas, mapaDeAlertasVariacao);
+        for (int x = colunas - 1; x > -1; x--) {
+            if (verificarColuna(mapasDeTemperatura, mapaDeAlertasVariacao, linhas, x) == 1) {
+                colunaMaisSafe = x;
+                x = -1;
+            }
+        }
+        if (colunaMaisSafe > -1) {
+            System.out.println("safe column = (" + colunaMaisSafe + ")");
+        } else {
+            System.out.println("safe column = NONE");
+        }
+    }
+    public static int verificarColuna(int[][] mapaDeTemperatura, String[][] mapaDeALertas, int linhas, int coluna) {
+        int safe = 1;
+        for (int x = 0; x < linhas; x++) {
+            if (mapaDeALertas[x][coluna].equals("C")) {
+                safe = 0;
+            }
+        }
+        return safe;
     }
 }
