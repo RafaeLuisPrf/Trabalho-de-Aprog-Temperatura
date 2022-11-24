@@ -4,10 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d160461b-f8f0-458e-848d-eb9f323483ef" name="Changes" comment="Atualização: ex J completo e a leitura dos ficheiros , ja esta feita">
+    <list default="true" id="d160461b-f8f0-458e-848d-eb9f323483ef" name="Changes" comment="Atualização: Ex i atualizado e melhorias pequenas feitas">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Temperaturas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperaturas.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Trabalho-de-Aprog-Temperatura/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Trabalho-de-Aprog-Temperatura/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <list id="616672af-9bc9-409e-9f03-1516eca622d5" name="Changes by Utilizador" comment="">
       <change beforePath="$PROJECT_DIR$/Temperaturas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperaturas.java" afterDir="false" />
     </list>
-    <list id="616672af-9bc9-409e-9f03-1516eca622d5" name="Changes by Utilizador" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,6 +32,44 @@
       </GitPushTagMode>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="LineStatusTrackerManager">
+    <file path="$PROJECT_DIR$/Temperaturas.java">
+      <ranges>
+        <range start1="1" end1="1" start2="1" end2="2" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="2" end1="2" start2="3" end2="4" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="3" end1="3" start2="5" end2="6" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="10" end1="10" start2="13" end2="14" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="18" end1="19" start2="22" end2="23" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="53" end1="54" start2="57" end2="59" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="62" end1="63" start2="67" end2="69" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="96" end1="97" start2="102" end2="103" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="102" end1="103" start2="108" end2="109" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="104" end1="105" start2="110" end2="111" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="106" end1="107" start2="112" end2="113" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="108" end1="109" start2="114" end2="115" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="115" end1="116" start2="121" end2="122" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="140" end1="141" start2="146" end2="147" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="148" end1="149" start2="154" end2="155" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="151" end1="152" start2="157" end2="158" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="154" end1="155" start2="160" end2="161" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="157" end1="158" start2="163" end2="164" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="192" end1="193" start2="198" end2="199" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="198" end1="199" start2="204" end2="206" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="205" end1="206" start2="212" end2="213" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="210" end1="210" start2="217" end2="218" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="215" end1="216" start2="223" end2="224" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="225" end1="230" start2="233" end2="237" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="233" end1="236" start2="240" end2="242" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="242" end1="242" start2="248" end2="249" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="276" end1="277" start2="283" end2="284" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="278" end1="282" start2="285" end2="287" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="283" end1="287" start2="288" end2="299" changelist="616672af-9bc9-409e-9f03-1516eca622d5" />
+        <range start1="289" end1="293" start2="301" end2="302" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="294" end1="302" start2="303" end2="303" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+        <range start1="303" end1="305" start2="304" end2="304" changelist="d160461b-f8f0-458e-848d-eb9f323483ef" />
+      </ranges>
+    </file>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -74,6 +116,8 @@
       <workItem from="1669061492197" duration="1223000" />
       <workItem from="1669117711676" duration="1746000" />
       <workItem from="1669195717553" duration="3074000" />
+      <workItem from="1669207592078" duration="774000" />
+      <workItem from="1669213195342" duration="2921000" />
     </task>
     <task id="LOCAL-00001" summary="Atualização, parte a),b),c), e mais ou menos da e)feito">
       <created>1668801341560</created>
@@ -124,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1669163457082</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Atualização: Vatual">
+      <created>1669203466665</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1669203466665</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -148,7 +199,9 @@
     <MESSAGE value="Atualização, a) , b) ,c) ,d) ,e) ,f) ,g) ,h) i) feitos.&#10;falta:j) e otimização (ainda ha muito esparguete)" />
     <MESSAGE value="Atualização, a) , b) ,c) ,d) ,e) ,f) ,g) ,h) i) feitos.&#10;falta:j(ja comecei mas ha umas cenas que temos de perguntar ao stor)) e otimização (ainda ha muito esparguete)" />
     <MESSAGE value="Atualização: ex J completo, so falta a atualização da leitura do input por ficheiros" />
-    <option name="LAST_COMMIT_MESSAGE" value="Atualização: ex J completo, so falta a atualização da leitura do input por ficheiros" />
+    <MESSAGE value="Atualização: Vatual" />
+    <MESSAGE value="Atualização: Ex i atualizado e melhorias pequenas feitas" />
+    <option name="LAST_COMMIT_MESSAGE" value="Atualização: Ex i atualizado e melhorias pequenas feitas" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
