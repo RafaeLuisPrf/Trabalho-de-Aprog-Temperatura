@@ -277,17 +277,7 @@ public class Temperaturas {
             }
         } else {
 
-            for (int i = 0; i < linhas && fogoEncontrado == false; i++){
-                for (int j = 0; j < colunas && fogoEncontrado == false; j++){
-
-                    if (mapaDeTemperaturas[i][j] > FIRE) {
-
-                        fogoEncontrado = true;
-
-                    }
-
-                }
-            }
+            System.out.println("Não é possivel colocar o balde");
 
         }
         if (fogoEncontrado == true) {
