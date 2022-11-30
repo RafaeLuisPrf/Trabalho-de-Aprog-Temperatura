@@ -253,24 +253,42 @@ public class Temperaturas {
 
         boolean fogoEncontrado = false;
 
-        for (int i = 1; i < linhas - 1; i++) {
-            for (int j = 1; j < colunas - 1; j++) {
-                for (int k = i - 1; k <= i + 1; k++) {
-                    for (int l = j - 1; l <= j + 1; l++) {
-                        if (mapaDeTemperaturas[k][l] >= FIRE) {
-                            nFogos++;
-                            fogoEncontrado = true;
+
+        if (linhas > 2 && colunas > 2 ) {
+
+            for (int i = 1; i < linhas - 1; i++) {
+                for (int j = 1; j < colunas - 1; j++) {
+                    for (int k = i - 1; k <= i + 1; k++) {
+                        for (int l = j - 1; l <= j + 1; l++) {
+                            if (mapaDeTemperaturas[k][l] > FIRE) {
+                                nFogos++;
+                                fogoEncontrado = true;
+                            }
                         }
                     }
-                }
-                if (nFogosMax < nFogos) {
+                    if (nFogosMax < nFogos) {
 
-                    nFogosMax = nFogos;
-                    x = j;
-                    y = i;
+                        nFogosMax = nFogos;
+                        x = j;
+                        y = i;
+                    }
+                    nFogos = 0;
                 }
-                nFogos = 0;
             }
+        } else {
+
+            for (int i = 0; i < linhas && fogoEncontrado == false; i++){
+                for (int j = 0; j < colunas && fogoEncontrado == false; j++){
+
+                    if (mapaDeTemperaturas[i][j] > FIRE) {
+
+                        fogoEncontrado = true;
+
+                    }
+
+                }
+            }
+
         }
         if (fogoEncontrado == true) {
             System.out.printf("drop water at (%d , %d)%n", y, x);
