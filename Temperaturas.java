@@ -1,8 +1,12 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Temperaturas {
 
-    static Scanner read = new Scanner(System.in);
+
+
+    public static final String INPUT="Entrada";
 
     public static final int VARIACAO_TEMP1 = -10;
     public static final int VARIACAO_TEMP2 = 10;
@@ -12,18 +16,14 @@ public class Temperaturas {
     public static final int CATASTROPHIC = 40;
     public static final int FIRE = 50;
 
-    public static void main(String[] args) {
+    public static void main(String[] args)throws FileNotFoundException  {
 
-        int linhas, colunas;
 
-        read.nextLine(); // ler a primeira linha
-        linhas = read.nextInt();
-        colunas = read.nextInt();
 
-        char[][] mapaDeAlertas = new char[linhas][colunas]; //Matriz para guardar os Alertas c)
 
         //a
-        int[][] mapaDeTemperatura = lerTemperaturas(linhas, colunas); // mapa de temperatura (matriz) .a)
+        int[][] mapaDeTemperatura = lerTemperaturas(); // mapa de temperatura (matriz) .a)
+        int linhas= mapaDeTemperatura.length, colunas=mapaDeTemperatura[0].length;
 
         //b
         System.out.println("b)");
@@ -31,8 +31,10 @@ public class Temperaturas {
 
         //c
         System.out.println("c)");
+        char[][] mapaDeAlertas = new char[linhas][colunas]; //Matriz para guardar os Alertas c)
         criarMapaDeAlertas(mapaDeTemperatura, linhas, colunas, mapaDeAlertas);//criar a matriz alertas
         mostrarMapaDeAlertas(linhas, colunas, mapaDeAlertas); // matriz com alertas
+
 
         //d
         System.out.println("d)");
@@ -70,13 +72,18 @@ public class Temperaturas {
     }
 
     //a
-    public static int[][] lerTemperaturas(int linhas, int colunas) {
+    public static int[][] lerTemperaturas() throws FileNotFoundException {
+
+        Scanner in = new Scanner(new File(INPUT));
+        String dataEHoras = in.nextLine();
+        int linhas = in.nextInt(),colunas=in.nextInt();
+
 
         int[][] mapaDeTemperatura = new int[linhas][colunas]; // colocar os valores na matriz
 
         for (int i = 0; i < linhas; i++) {
             for (int x = 0; x < colunas; x++) {
-                mapaDeTemperatura[i][x] = read.nextInt();
+                mapaDeTemperatura[i][x] = in.nextInt();
             }
         }
 
@@ -252,9 +259,12 @@ public class Temperaturas {
         int x = 0, y = 0, nFogosMax = 0, nFogos = 0;
 
         boolean fogoEncontrado = false;
+        boolean espacoSuficiente = false;
 
 
         if (linhas > 2 && colunas > 2 ) {
+
+            espacoSuficiente = true;
 
             for (int i = 1; i < linhas - 1; i++) {
                 for (int j = 1; j < colunas - 1; j++) {
@@ -277,14 +287,14 @@ public class Temperaturas {
             }
         } else {
 
-            System.out.println("Não é possivel colocar o balde");
-
+            System.out.println("Não é possível colocar o balde");
         }
         if (fogoEncontrado == true) {
             System.out.printf("drop water at (%d , %d)%n", y, x);
         } else {
-            System.out.println("no fire");
-
+            if ( espacoSuficiente == true) {
+                System.out.println("no fire");
+            }
         }
         System.out.println();
     }
