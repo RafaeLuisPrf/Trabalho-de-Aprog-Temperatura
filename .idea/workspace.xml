@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="d160461b-f8f0-458e-848d-eb9f323483ef" name="Changes" comment="Atualização: Ex i atualizado e melhorias pequenas feitas">
       <change afterPath="$PROJECT_DIR$/Entrada" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Entrada1" afterDir="false" />
@@ -11,6 +12,9 @@
       <change beforePath="$PROJECT_DIR$/Temperaturas.java" beforeDir="false" afterPath="$PROJECT_DIR$/Temperaturas.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Trabalho-de-Aprog-Temperatura/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Trabalho-de-Aprog-Temperatura/.idea/workspace.xml" afterDir="false" />
     </list>
+=======
+    <list default="true" id="d160461b-f8f0-458e-848d-eb9f323483ef" name="Changes" comment="Atualização: Ex i atualizado e melhorias pequenas feitas" />
+>>>>>>> Stashed changes
     <list id="616672af-9bc9-409e-9f03-1516eca622d5" name="Changes by Utilizador" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
