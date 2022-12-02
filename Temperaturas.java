@@ -86,6 +86,7 @@ public class Temperaturas {
                 mapaDeTemperatura[i][x] = in.nextInt();
             }
         }
+        in.close();
 
         return mapaDeTemperatura;
     }
