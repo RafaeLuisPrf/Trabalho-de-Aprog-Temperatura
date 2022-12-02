@@ -186,6 +186,52 @@ public class Temperaturas {
     }
 
     //f
+    public static void encontrarIncendio(int[][] mapaDeTemperaturas, int linhas, int colunas) {
+
+        int x = 0, y = 0, nFogosMax = 0, nFogos = 0;
+
+        boolean fogoEncontrado = false;
+
+
+
+        if (linhas > 2 && colunas > 2 ) {
+
+
+            for (int i = 1; i < linhas - 1; i++) {
+                for (int j = 1; j < colunas - 1; j++) {
+                    for (int k = i - 1; k <= i + 1; k++) {
+                        for (int l = j - 1; l <= j + 1; l++) {
+                            if (mapaDeTemperaturas[k][l] > FIRE) {
+                                nFogos++;
+                                fogoEncontrado = true;
+                            }
+                        }
+                    }
+                    if (nFogosMax < nFogos) {
+
+                        nFogosMax = nFogos;
+                        x = j;
+                        y = i;
+                    }
+                    nFogos = 0;
+                }
+            }
+            if (fogoEncontrado == true) {
+
+                System.out.printf("drop water at (%d , %d)%n", y, x);
+            } else {
+
+                System.out.println("no fire");
+
+            }
+            System.out.println();
+
+        } else {
+
+            System.out.println("Não é possível colocar o balde");
+        }
+        }
+
     public static void necessarioParaCatastrophic(int linhas, int colunas, int[][] mapaDeTemperatura) {
 
         int menor = mapaDeTemperatura[0][0], tmpAtual, tmpNecessariaPC;
@@ -252,52 +298,7 @@ public class Temperaturas {
         }
         mostrarMapaDeAlertas(linhas, colunas, copiaMapaDeAlertasVaricao);
     }
-
     //i)
-    public static void encontrarIncendio(int[][] mapaDeTemperaturas, int linhas, int colunas) {
-
-        int x = 0, y = 0, nFogosMax = 0, nFogos = 0;
-
-        boolean fogoEncontrado = false;
-        boolean espacoSuficiente = false;
-
-
-        if (linhas > 2 && colunas > 2 ) {
-
-            espacoSuficiente = true;
-
-            for (int i = 1; i < linhas - 1; i++) {
-                for (int j = 1; j < colunas - 1; j++) {
-                    for (int k = i - 1; k <= i + 1; k++) {
-                        for (int l = j - 1; l <= j + 1; l++) {
-                            if (mapaDeTemperaturas[k][l] > FIRE) {
-                                nFogos++;
-                                fogoEncontrado = true;
-                            }
-                        }
-                    }
-                    if (nFogosMax < nFogos) {
-
-                        nFogosMax = nFogos;
-                        x = j;
-                        y = i;
-                    }
-                    nFogos = 0;
-                }
-            }
-        } else {
-
-            System.out.println("Não é possível colocar o balde");
-        }
-        if (fogoEncontrado == true) {
-            System.out.printf("drop water at (%d , %d)%n", y, x);
-        } else {
-            if ( espacoSuficiente == true) {
-                System.out.println("no fire");
-            }
-        }
-        System.out.println();
-    }
 
     public static void colunasSafe(char[][] mapaDeAlertas, int linhas, int colunas) {
 
