@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4baf05f9-a6c2-4f91-8123-8a790e4f9ef6" name="Changes" comment="Atualização: Ex i atualizado e melhorias pequenas feitas" />
+    <list default="true" id="4baf05f9-a6c2-4f91-8123-8a790e4f9ef6" name="Changes" comment="Atualização: Ex i atualizado e melhorias pequenas feitas">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +58,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d160461b-f8f0-458e-848d-eb9f323483ef" name="Changes" comment="" />
+      <changelist id="4baf05f9-a6c2-4f91-8123-8a790e4f9ef6" name="Changes" comment="Atualização: Ex i atualizado e melhorias pequenas feitas" />
       <created>1668678634745</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
