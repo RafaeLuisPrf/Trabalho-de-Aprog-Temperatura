@@ -98,8 +98,7 @@ public class Temperaturas {
             for (int x = 0; x < colunas; x++) {
 
 
-                System.out.printf("%3d ", mapaDeTemperaturas[i][x]);
-
+                System.out.printf("%4d", mapaDeTemperaturas[i][x]);
 
             }
             System.out.println();
