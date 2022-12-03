@@ -96,12 +96,7 @@ public class Temperaturas {
 
         for (int i = 0; i < linhas; i++) {
             for (int x = 0; x < colunas; x++) {
-
-                if (mapaDeTemperaturas[i][x] < 0) { // caso seja negativo o volar, coloco 1 casa decimal a traz
-                    System.out.print(" " + mapaDeTemperaturas[i][x]);
-                } else {
-                    System.out.print("  " + mapaDeTemperaturas[i][x]);
-                }
+                    System.out.printf("%4d", mapaDeTemperaturas[i][x]);
             }
             System.out.println();
         }
